@@ -1,11 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Energia Hidroelectrica grupo 7</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Energía Hidroeléctrica</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-    
+  <header class="hero">
+    <nav class="navbar container">
+      <div class="logo">
+        <div class="logo-icon">⚡</div>
+        <div>
+          <span class="logo-top">Energías</span>
+          <span class="logo-bottom">Renovables</span>
+        </div>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#solar">Energía Solar</a></li>
+        <li><a href="#eolica">Energía Eólica</a></li>
+        <li><a href="#hidroelectrica">Energía Hidroeléctrica</a></li>
+        <li><a href="#datos">Datos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero-content container" id="inicio">
+      <div class="hero-text">
+        <h1>Energía Hidroeléctrica</h1>
+        <p>Energía limpia generada por el movimiento del agua</p>
+        <a href="#datos" class="btn-primary">Ver datos globales</a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="section container about" id="hidroelectrica">
+      <div class="section-grid">
+        <div class="section-text">
+          <h2>¿Qué es la Energía Hidroeléctrica?</h2>
+          <p>
+            Energía renovable es una fuente de energía limpia que se genera desde
+            recursos naturales y se obtiene mediante el aprovechamiento del agua en
+            movimiento para producir electricidad.
+          </p>
+          <p>
+            El agua almacenada o en movimiento hace girar turbinas conectadas a
+            generadores, transformando la energía mecánica en energía eléctrica con
+            bajo impacto en emisiones.
+          </p>
+        </div>
+
+        <div class="section-image">
+          <img src="assets/hidro-1.jpg" alt="Central hidroeléctrica" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section how-it-works">
+      <div class="container">
+        <h2 class="centered-title">¿Cómo Funciona?</h2>
+
+        <div class="steps-grid">
+          <article class="step-card">
+            <div class="step-number">1</div>
+            <img src="assets/paso-1.jpg" alt="Agua almacenada en represas" />
+            <h3>Agua almacenada en represas</h3>
+            <p>El agua se acumula y se controla para aprovechar su energía.</p>
+          </article>
+
+          <article class="step-card">
+            <div class="step-number">2</div>
+            <img src="assets/paso-2.jpg" alt="Movimiento del agua" />
+            <h3>Movimiento del agua</h3>
+            <p>El flujo del agua desciende con fuerza a través del sistema.</p>
+          </article>
+
+          <article class="step-card">
+            <div class="step-number">3</div>
+            <img src="assets/paso-3.jpg" alt="Turbinas giran" />
+            <h3>Turbinas giran</h3>
+            <p>La presión del agua hace girar las turbinas mecánicas.</p>
+          </article>
+
+          <article class="step-card">
+            <div class="step-number">4</div>
+            <img src="assets/paso-4.jpg" alt="Generador produce electricidad" />
+            <h3>Generador produce electricidad</h3>
+            <p>La energía del movimiento se convierte en electricidad útil.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="datos">
+      <h2 class="centered-title">Datos Globales de Energía Renovable (1965 - 2022)</h2>
+
+      <div class="data-grid">
+        <div class="card">
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>Año</th>
+                  <th>País</th>
+                  <th>Energía Hidroeléctrica</th>
+                  <th>Energía Solar</th>
+                </tr>
+              </thead>
+              <tbody id="dataTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card chart-card">
+          <div class="chart-legend">
+            <span class="legend-item hidro">Hidroeléctrica</span>
+            <span class="legend-item solar">Solar</span>
+            <span class="legend-item eolica">Eólica</span>
+          </div>
+          <canvas id="energyChart" width="500" height="280"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container advantages-disadvantages">
+      <div class="info-box positive">
+        <h2>Ventajas</h2>
+        <ul>
+          <li>Energía renovable</li>
+          <li>Bajas emisiones</li>
+          <li>Alta eficiencia</li>
+        </ul>
+      </div>
+
+      <div class="info-box negative">
+        <h2>Desventajas</h2>
+        <ul>
+          <li>Impacto ambiental</li>
+          <li>Alto costo de infraestructura</li>
+          <li>Dependencia del clima</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contacto">
+    <div class="container">
+      <p>Proyecto Energías Renovables | Bootcamp Tech | 2026</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
